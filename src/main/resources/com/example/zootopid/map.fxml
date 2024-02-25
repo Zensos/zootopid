@@ -15,7 +15,7 @@
                   <Image url="@../../../image/map.png" />
                </image>
             </ImageView>
-            <Button fx:id="panda" layoutX="1347.0" layoutY="381.0" mnemonicParsing="false" onAction="#onHelloButtonClick" style="-fx-background-color: trasparent;">
+            <Button fx:id="panda" layoutX="676.0" layoutY="478.0" mnemonicParsing="false" onAction="#onHelloButtonClick" style="-fx-background-color: trasparent;">
                <graphic>
                   <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                      <image>
