@@ -31,6 +31,7 @@ public class HelloController {
         animals.put("Dog", Dog.class);
         animals.put("Panda", Panda.class);
         animals.put("Crocodile", Crocodile.class);
+
     }
 
     @FXML
