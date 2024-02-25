@@ -1,6 +1,7 @@
 package com.example.zootopid;
 
 import com.zootopid.animal.Animal;
+import com.zootopid.animal.aquarium.Dolphin;
 import com.zootopid.animal.red.Crocodile;
 import com.zootopid.animal.green.Panda;
 import javafx.event.ActionEvent;
@@ -26,7 +27,7 @@ public class HelloController {
     private Map<String, Class<?>> animals = new HashMap<>();
 
     public HelloController(){
-        animals.put("dog", Dog.class);
+        animals.put("dolphin", Dolphin.class);
         animals.put("panda", Panda.class);
         animals.put("crocodile", Crocodile.class);
 
