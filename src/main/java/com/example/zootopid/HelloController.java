@@ -1,9 +1,12 @@
 package com.example.zootopid;
 
 import com.zootopid.animal.Animal;
-import com.zootopid.animal.aquarium.Dolphin;
-import com.zootopid.animal.red.Crocodile;
-import com.zootopid.animal.green.Panda;
+import com.zootopid.animal.red.*;
+import com.zootopid.animal.blue.*;
+import com.zootopid.animal.green.*;
+import com.zootopid.animal.orange.*;
+import com.zootopid.animal.aquarium.*;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -26,10 +29,46 @@ public class HelloController {
     private ImageView imageView;
     private Map<String, Class<?>> animals = new HashMap<>();
 
-    public HelloController(){
+    public HelloController() {
+        // aquarium
         animals.put("dolphin", Dolphin.class);
-        animals.put("panda", Panda.class);
+        animals.put("jellyfish", JellyFish.class);
+        animals.put("neemo", Neemo.class);
+        animals.put("octopus", Octopus.class);
+        animals.put("pufferfish", PufferFish.class);
+        animals.put("shark", Shark.class);
+        animals.put("turtle", Turtle.class);
+        animals.put("whale", Whale.class);
+
+        // blue
+        animals.put("penguin", Penguin.class);
+        animals.put("polarbear", PolarBear.class);
+        animals.put("seal", Seal.class);
+
+        // green
+        animals.put("bunny", Bunny.class );
+        animals.put("deer", Deer.class);
+        animals.put("fox", Fox.class);
+        animals.put("koala", Koala.class);
+        animals.put("owl", Owl.class);
+        animals.put("panda", Panda.class );
+        animals.put("parrot", Parrot.class );
+        animals.put("sheep", Sheep.class );
+
+        // orange
+        animals.put("elephant", Elephant.class );
+        animals.put("giraffe", Giraffe.class );
+        animals.put("kangaroo", Kangaroo.class );
+        animals.put("lion", Lion.class );
+        animals.put("monkey", Monkey.class );
+        animals.put("rhino", Rhino.class );
+        animals.put("tiger", Tiger.class );
+        animals.put("zebra", Zebra.class );
+
+        // red
         animals.put("crocodile", Crocodile.class);
+        animals.put("flamingo", Flamingo.class);
+        animals.put("hippo", Hippo.class);
 
     }
 
