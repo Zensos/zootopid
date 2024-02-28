@@ -21,7 +21,7 @@
                      <graphic>
                         <ImageView fitHeight="277.0" fitWidth="304.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../image/animal/fox/fox.png" />
+                              <Image url="@../../../image/animal/fox/fox_head.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -30,7 +30,7 @@
                      <graphic>
                         <ImageView fitHeight="254.0" fitWidth="225.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../image/animal/panda/panda.png" />
+                              <Image url="@../../../image/animal/panda/panda_head.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -39,7 +39,7 @@
                      <graphic>
                         <ImageView fitHeight="201.0" fitWidth="225.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../image/animal/sheep/sheep.png" />
+                              <Image url="@../../../image/animal/sheep/sheep_head.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -48,7 +48,7 @@
                      <graphic>
                         <ImageView fitHeight="182.0" fitWidth="186.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../image/animal/rabbit/rabbit.png" />
+                              <Image url="@../../../image/animal/rabbit/rabbit_head.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -57,7 +57,7 @@
                      <graphic>
                         <ImageView fx:id="parrot" fitHeight="140.0" fitWidth="187.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../image/animal/parrot/parrot.png" />
+                              <Image url="@../../../image/animal/parrot/parrot_head.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -66,7 +66,7 @@
                      <graphic>
                         <ImageView fitHeight="154.0" fitWidth="156.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../image/animal/owl/owl.png" />
+                              <Image url="@../../../image/animal/owl/owl_head.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -75,7 +75,7 @@
                      <graphic>
                         <ImageView fx:id="deer" fitHeight="172.0" fitWidth="219.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../image/animal/deer/deer.png" />
+                              <Image url="@../../../image/animal/deer/deer_head.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -88,7 +88,7 @@
                      <graphic>
                         <ImageView fitHeight="142.0" fitWidth="155.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../image/animal/crocodile/crocodile.png" />
+                              <Image url="@../../../image/animal/crocodile/crocodile_head.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -97,7 +97,7 @@
                      <graphic>
                         <ImageView fitHeight="216.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../image/animal/hippo/hippo.png" />
+                              <Image url="@../../../image/animal/hippo/hippo_head.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -106,7 +106,7 @@
                      <graphic>
                         <ImageView fitHeight="148.0" fitWidth="172.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../image/animal/flamingo/flamango.png" />
+                              <Image url="@../../../image/animal/flamingo/flamingo_head.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -119,7 +119,7 @@
                      <graphic>
                         <ImageView fitHeight="200.0" fitWidth="192.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../image/animal/lion/lion.png" />
+                              <Image url="@../../../image/animal/lion/lion_head.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -128,7 +128,7 @@
                      <graphic>
                         <ImageView fitHeight="170.0" fitWidth="209.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../image/animal/kangaroo/kangaroo.png" />
+                              <Image url="@../../../image/animal/kangaroo/kangaroo_head.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -137,7 +137,7 @@
                      <graphic>
                         <ImageView fitHeight="158.0" fitWidth="166.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../image/animal/monkey/monkey.png" />
+                              <Image url="@../../../image/animal/monkey/monkey_head.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -146,7 +146,7 @@
                      <graphic>
                         <ImageView fitHeight="176.0" fitWidth="158.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../image/animal/elephant/elephant.png" />
+                              <Image url="@../../../image/animal/elephant/elephant_head.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -155,7 +155,7 @@
                      <graphic>
                         <ImageView fitHeight="190.0" fitWidth="181.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../image/animal/tiger/tiger.png" />
+                              <Image url="@../../../image/animal/tiger/tiger_head.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -164,7 +164,7 @@
                      <graphic>
                         <ImageView fitHeight="153.0" fitWidth="170.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../image/animal/zebra/zebra.png" />
+                              <Image url="@../../../image/animal/zebra/zebra_head.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -177,7 +177,7 @@
                      <graphic>
                         <ImageView fx:id="seal" fitHeight="160.0" fitWidth="162.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../image/animal/seal/seal.png" />
+                              <Image url="@../../../image/animal/seal/seal_head.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -186,7 +186,7 @@
                      <graphic>
                         <ImageView fx:id="polarbear" fitHeight="145.0" fitWidth="158.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../image/animal/polarbear/polarbear.png" />
+                              <Image url="@../../../image/animal/polarbear/polarbear_head.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -195,7 +195,7 @@
                      <graphic>
                         <ImageView fitHeight="154.0" fitWidth="157.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../image/animal/penguin/penguin.png" />
+                              <Image url="@../../../image/animal/penguin/penguin_head.png" />
                            </image>
                         </ImageView>
                      </graphic>
