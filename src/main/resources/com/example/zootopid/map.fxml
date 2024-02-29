@@ -6,45 +6,18 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.Pane?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: ORANGE;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.zootopid.HelloController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: ORANGE;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.zootopid.MapController">
    <center>
-      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <Pane prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: transparent;">
          <children>
             <ImageView fitHeight="1080.0" fitWidth="1920.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../image/map.png" />
                </image>
             </ImageView>
-            <Pane prefHeight="1080.0" prefWidth="1920.0">
+            <Pane prefHeight="1080.0" prefWidth="1938.0" style="-fx-background-color: transparent;">
                <children>
-                  <Button fx:id="fox" layoutX="300.0" layoutY="320.0" mnemonicParsing="false" onAction="#onHelloButtonClick" style="-fx-background-color: trasparent;">
-                     <graphic>
-                        <ImageView fitHeight="277.0" fitWidth="304.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../image/animal/fox/fox_head.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-                  <Button fx:id="panda" layoutX="140.0" layoutY="505.0" mnemonicParsing="false" onAction="#onHelloButtonClick" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: trasparent;">
-                     <graphic>
-                        <ImageView fitHeight="254.0" fitWidth="225.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../image/animal/panda/panda_head.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-                  <Button fx:id="sheep" layoutX="385.0" layoutY="570.0" mnemonicParsing="false" onAction="#onHelloButtonClick" prefHeight="88.0" prefWidth="47.0" style="-fx-background-color: trasparent;">
-                     <graphic>
-                        <ImageView fitHeight="201.0" fitWidth="225.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../image/animal/sheep/sheep_head.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-                  <Button fx:id="rabbit" layoutX="575.0" layoutY="400.0" mnemonicParsing="false" onAction="#onHelloButtonClick" style="-fx-background-color: trasparent;">
+                  <Button fx:id="rabbit" layoutX="534.0" layoutY="417.0" mnemonicParsing="false" onAction="#onHelloButtonClick" style="-fx-background-color: transparent;">
                      <graphic>
                         <ImageView fitHeight="182.0" fitWidth="186.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -53,105 +26,16 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="parrot" layoutX="650.0" layoutY="620.0" mnemonicParsing="false" onAction="#onHelloButtonClick" style="-fx-background-color: trasparent;">
+                  <Button fx:id="fox" layoutX="272.0" layoutY="370.0" mnemonicParsing="false" onAction="#onHelloButtonClick" style="-fx-background-color: transparent;">
                      <graphic>
-                        <ImageView fx:id="parrot" fitHeight="140.0" fitWidth="187.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="277.0" fitWidth="304.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../image/animal/parrot/parrot_head.png" />
+                              <Image url="@../../../image/animal/fox/fox_head.png" />
                            </image>
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="owl" layoutX="750.0" layoutY="500.0" mnemonicParsing="false" onAction="#onHelloButtonClick" style="-fx-background-color: trasparent;">
-                     <graphic>
-                        <ImageView fitHeight="154.0" fitWidth="156.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../image/animal/owl/owl_head.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-                  <Button fx:id="deer" layoutX="240.0" layoutY="690.0" mnemonicParsing="false" onAction="#onHelloButtonClick" prefHeight="72.0" prefWidth="51.0" style="-fx-background-color: trasparent;">
-                     <graphic>
-                        <ImageView fx:id="deer" fitHeight="172.0" fitWidth="219.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../image/animal/deer/deer_head.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-               </children>
-            </Pane>
-            <Pane prefHeight="1080.0" prefWidth="1920.0">
-               <children>
-                  <Button fx:id="crocodile" layoutX="1050.0" layoutY="400.0" mnemonicParsing="false" onAction="#onHelloButtonClick" style="-fx-background-color: trasparent;">
-                     <graphic>
-                        <ImageView fitHeight="142.0" fitWidth="155.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../image/animal/crocodile/crocodile_head.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-                  <Button fx:id="hippo" layoutX="750.0" layoutY="200.0" mnemonicParsing="false" onAction="#onHelloButtonClick" style="-fx-background-color: trasparent;">
-                     <graphic>
-                        <ImageView fitHeight="216.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../image/animal/hippo/hippo_head.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-                  <Button fx:id="flamingo" layoutX="490.0" layoutY="250.0" mnemonicParsing="false" onAction="#onHelloButtonClick" style="-fx-background-color: trasparent;">
-                     <graphic>
-                        <ImageView fitHeight="148.0" fitWidth="172.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../image/animal/flamingo/flamingo_head.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-               </children>
-            </Pane>
-            <Pane prefHeight="1080.0" prefWidth="1920.0">
-               <children>
-                  <Button fx:id="lion" layoutX="800.0" layoutY="726.0" mnemonicParsing="false" onAction="#onHelloButtonClick" style="-fx-background-color: trasparent;">
-                     <graphic>
-                        <ImageView fitHeight="200.0" fitWidth="192.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../image/animal/lion/lion_head.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-                  <Button fx:id="kangaroo" layoutX="1100.0" layoutY="780.0" mnemonicParsing="false" onAction="#onHelloButtonClick" style="-fx-background-color: trasparent;">
-                     <graphic>
-                        <ImageView fitHeight="170.0" fitWidth="209.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../image/animal/kangaroo/kangaroo_head.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-                  <Button fx:id="monkey" layoutX="1319.0" layoutY="740.0" mnemonicParsing="false" onAction="#onHelloButtonClick" style="-fx-background-color: trasparent;">
-                     <graphic>
-                        <ImageView fitHeight="158.0" fitWidth="166.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../image/animal/monkey/monkey_head.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-                  <Button fx:id="elephant" layoutX="1471.0" layoutY="667.0" mnemonicParsing="false" onAction="#onHelloButtonClick" style="-fx-background-color: trasparent;">
-                     <graphic>
-                        <ImageView fitHeight="176.0" fitWidth="158.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../image/animal/elephant/elephant_head.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-                  <Button fx:id="tiger" layoutX="1000.0" layoutY="550.0" mnemonicParsing="false" onAction="#onHelloButtonClick" style="-fx-background-color: trasparent;">
+                  <Button fx:id="tiger" layoutX="975.0" layoutY="548.0" mnemonicParsing="false" onAction="#onHelloButtonClick" style="-fx-background-color: transparent;">
                      <graphic>
                         <ImageView fitHeight="190.0" fitWidth="181.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -160,7 +44,24 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="zebra" layoutX="1225.0" layoutY="580.0" mnemonicParsing="false" onAction="#onHelloButtonClick" prefHeight="110.0" prefWidth="85.0" style="-fx-background-color: trasparent;">
+                  <Button fx:id="elephant" layoutX="1444.0" layoutY="696.0" mnemonicParsing="false" onAction="#onHelloButtonClick" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="176.0" fitWidth="158.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../image/animal/elephant/elephant_head.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="kangaroo" layoutX="1100.0" layoutY="780.0" mnemonicParsing="false" onAction="#onHelloButtonClick" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="170.0" fitWidth="209.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../image/animal/kangaroo/kangaroo_head.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="zebra" layoutX="1220.0" layoutY="625.0" mnemonicParsing="false" onAction="#onHelloButtonClick" prefHeight="110.0" prefWidth="85.0" style="-fx-background-color: transparent;">
                      <graphic>
                         <ImageView fitHeight="153.0" fitWidth="170.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -169,33 +70,119 @@
                         </ImageView>
                      </graphic>
                   </Button>
-               </children>
-            </Pane>
-            <Pane prefHeight="1080.0" prefWidth="1920.0">
-               <children>
-                  <Button fx:id="seal" layoutX="1280.0" layoutY="300.0" mnemonicParsing="false" onAction="#onHelloButtonClick" style="-fx-background-color: trasparent;">
+                  <Button fx:id="lion" layoutX="827.0" layoutY="686.0" mnemonicParsing="false" onAction="#onHelloButtonClick" style="-fx-background-color: transparent;">
                      <graphic>
-                        <ImageView fx:id="seal" fitHeight="160.0" fitWidth="162.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="200.0" fitWidth="192.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../image/animal/lion/lion_head.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="seal" layoutX="1280.0" layoutY="300.0" mnemonicParsing="false" onAction="#onHelloButtonClick" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="160.0" fitWidth="162.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../../image/animal/seal/seal_head.png" />
                            </image>
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="polarbear" layoutX="1366.0" layoutY="125.0" mnemonicParsing="false" onAction="#onHelloButtonClick" style="-fx-background-color: trasparent;">
+                  <Button fx:id="polarbear" layoutX="1366.0" layoutY="125.0" mnemonicParsing="false" onAction="#onHelloButtonClick" prefHeight="145.0" prefWidth="158.0" style="-fx-background-color: transparent;">
                      <graphic>
-                        <ImageView fx:id="polarbear" fitHeight="145.0" fitWidth="158.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="145.0" fitWidth="158.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../../image/animal/polarbear/polarbear_head.png" />
                            </image>
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="penguin" layoutX="1547.0" layoutY="520.0" mnemonicParsing="false" onAction="#onHelloButtonClick" style="-fx-background-color: trasparent;">
+                  <Button fx:id="penguin" layoutX="1547.0" layoutY="520.0" mnemonicParsing="false" onAction="#onHelloButtonClick" style="-fx-background-color: transparent;">
                      <graphic>
                         <ImageView fitHeight="154.0" fitWidth="157.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../../image/animal/penguin/penguin_head.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="monkey" layoutX="1304.0" layoutY="748.0" mnemonicParsing="false" onAction="#onHelloButtonClick" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="158.0" fitWidth="166.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../image/animal/monkey/monkey_head.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="crocodile" layoutX="1066.0" layoutY="383.0" mnemonicParsing="false" onAction="#onHelloButtonClick" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="142.0" fitWidth="155.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../image/animal/crocodile/crocodile_head.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="hippo" layoutX="753.0" layoutY="196.0" mnemonicParsing="false" onAction="#onHelloButtonClick" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="216.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../image/animal/hippo/hippo_head.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="flamingo" layoutX="534.0" layoutY="261.0" mnemonicParsing="false" onAction="#onHelloButtonClick" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="148.0" fitWidth="172.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../image/animal/flamingo/flamingo_head.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="panda" layoutX="140.0" layoutY="528.0" mnemonicParsing="false" onAction="#onHelloButtonClick" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="254.0" fitWidth="225.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../image/animal/panda/panda_head.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="sheep" layoutX="383.0" layoutY="578.0" mnemonicParsing="false" onAction="#onHelloButtonClick" prefHeight="88.0" prefWidth="47.0" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="201.0" fitWidth="225.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../image/animal/sheep/sheep_head.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="parrot" layoutX="602.0" layoutY="589.0" mnemonicParsing="false" onAction="#onHelloButtonClick" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="140.0" fitWidth="187.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../image/animal/parrot/parrot_head.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="owl" layoutX="741.0" layoutY="520.0" mnemonicParsing="false" onAction="#onHelloButtonClick" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="154.0" fitWidth="156.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../image/animal/owl/owl_head.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="deer" layoutX="236.0" layoutY="682.0" mnemonicParsing="false" onAction="#onHelloButtonClick" prefHeight="72.0" prefWidth="51.0" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="172.0" fitWidth="219.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../image/animal/deer/deer_head.png" />
                            </image>
                         </ImageView>
                      </graphic>
