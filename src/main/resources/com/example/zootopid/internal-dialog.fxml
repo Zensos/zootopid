@@ -14,7 +14,7 @@
          <center>
             <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                <children>
-                  <ImageView fitHeight="870.0" fitWidth="1520.0" layoutX="1.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="zone_background" fitHeight="870.0" fitWidth="1520.0" layoutX="1.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../image/background/green.gif" />
                      </image>
@@ -30,7 +30,7 @@
          <bottom>
             <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                <children>
-                  <Label fx:id="animalName" style="-fx-padding: 30;">
+                  <Label fx:id="animalName" layoutX="27.0" style="-fx-padding: 30;">
                      <font>
                         <Font name="System Bold" size="24.0" />
                      </font>

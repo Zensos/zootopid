@@ -20,7 +20,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.HashMap;
 import java.util.Map;
 
-public class MapController {
+public class MapController extends SceneController {
     @FXML
     private Label animalName;
     @FXML
@@ -49,24 +49,24 @@ public class MapController {
         animals.put("seal", Seal.class);
 
         // green
-        animals.put("bunny", Bunny.class );
+        animals.put("bunny", Bunny.class);
         animals.put("deer", Deer.class);
         animals.put("fox", Fox.class);
         animals.put("koala", Koala.class);
         animals.put("owl", Owl.class);
-        animals.put("panda", Panda.class );
-        animals.put("parrot", Parrot.class );
-        animals.put("sheep", Sheep.class );
+        animals.put("panda", Panda.class);
+        animals.put("parrot", Parrot.class);
+        animals.put("sheep", Sheep.class);
 
         // orange
-        animals.put("elephant", Elephant.class );
-        animals.put("giraffe", Giraffe.class );
-        animals.put("kangaroo", Kangaroo.class );
-        animals.put("lion", Lion.class );
-        animals.put("monkey", Monkey.class );
-        animals.put("rhino", Rhino.class );
-        animals.put("tiger", Tiger.class );
-        animals.put("zebra", Zebra.class );
+        animals.put("elephant", Elephant.class);
+        animals.put("giraffe", Giraffe.class);
+        animals.put("kangaroo", Kangaroo.class);
+        animals.put("lion", Lion.class);
+        animals.put("monkey", Monkey.class);
+        animals.put("rhino", Rhino.class);
+        animals.put("tiger", Tiger.class);
+        animals.put("zebra", Zebra.class);
 
         // red
         animals.put("crocodile", Crocodile.class);
@@ -89,20 +89,20 @@ public class MapController {
         DialogPane dialogPane = fxmlLoader.load();
         Dialog dia = new Dialog();
         dia.setDialogPane(dialogPane);
-
-        if(animal.getZone().getZoneName() == "green") {
-            Image bgImage = new Image(getClass().getResourceAsStream("/image/background/" + animal.getZone().getZoneName() + ".gif"));
+        System.out.println(animal.getZone().getZoneName().equals("green"));
+        if(animal.getZone().getZoneName().toLowerCase().equals("green")) {
+            Image bgImage = new Image(getClass().getResourceAsStream("/image/background/" + animal.getZone().getZoneName().toLowerCase() + ".gif"));
+            System.out.println(bgImage);
             this.zone_background.setImage(bgImage);
         } else {
-            Image bgImage = new Image(getClass().getResourceAsStream("/image/background/" + animal.getZone().getZoneName() + ".png"));
+            Image bgImage = new Image(getClass().getResourceAsStream("/image/background/" + animal.getZone().getZoneName().toLowerCase() + ".png"));
             this.zone_background.setImage(bgImage);
         }
 
         Image newImage = new Image(getClass().getResourceAsStream("/image/animal/" + id + "/" + id + ".png"));
-
         this.animalName.setText(id);
         this.imageView.setImage(newImage);
-
+        this.imageView.setTranslateX(300);
 
         dia.initModality(Modality.APPLICATION_MODAL);
         Button closeButton = new Button();
