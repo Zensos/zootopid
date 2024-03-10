@@ -83,7 +83,6 @@ public class MapController extends SceneController {
         Object instance = clazz.getDeclaredConstructor().newInstance();
         Animal animal = (Animal)instance;
 
-
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("internal-dialog.fxml"));
         fxmlLoader.setController(this);
         DialogPane dialogPane = fxmlLoader.load();
@@ -102,7 +101,6 @@ public class MapController extends SceneController {
         Image newImage = new Image(getClass().getResourceAsStream("/image/animal/" + id + "/" + id + ".png"));
         this.animalName.setText(id);
         this.imageView.setImage(newImage);
-        this.imageView.setTranslateX(300);
 
         dia.initModality(Modality.APPLICATION_MODAL);
         Button closeButton = new Button();

@@ -7,7 +7,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
-public class StoreController {
+public class StoreController extends SceneController {
 
     @FXML
     protected TextField th_adult, th_child, th_student, th_elder, fr_adult, fr_child, th_adult_aq, th_child_aq, th_student_aq, th_elder_aq, fr_adult_aq, fr_child_aq, rental_car, rental_motorcycle, rental_bicycle;
@@ -71,5 +71,9 @@ public class StoreController {
         );
         this.total.setText((th_zoo_aquarium + fr_zoo_aquarium + rental) + "");
 
+    }
+
+    private Boolean purchase() {
+        return true;
     }
 }
