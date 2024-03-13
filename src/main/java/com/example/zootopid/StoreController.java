@@ -1,11 +1,16 @@
 package com.example.zootopid;
 
+import com.zootopid.client.User;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+
+import java.io.IOException;
 
 public class StoreController extends SceneController {
 
@@ -17,6 +22,10 @@ public class StoreController extends SceneController {
 
     @FXML
     protected Button submit;
+    @FXML
+    protected Label balance;
+
+    LocalStorage localStorage = LocalStorage.getInstance();
 
     public void initialize() {
         attachListener(th_adult);
@@ -73,7 +82,8 @@ public class StoreController extends SceneController {
 
     }
 
-    private Boolean purchase() {
-        return true;
+    public void purchase() throws IOException {
+        localStorage.getUser().setPoint(localStorage.getUser().getPoint() + 10);
     }
+
 }

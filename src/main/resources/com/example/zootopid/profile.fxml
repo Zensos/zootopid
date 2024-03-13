@@ -14,7 +14,7 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.zootopid.SceneController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.zootopid.AuthController">
   <center>
     <AnchorPane prefHeight="1080" prefWidth="1920" BorderPane.alignment="CENTER">
       <children>
@@ -35,7 +35,7 @@
                 <Font name="Ubuntu Regular" size="32.0" />
               </font>
             </Label>
-            <Label layoutX="456.0" layoutY="105.0" style="-fx-text-fill: white;" text="Point : 1000" textFill="WHITE">
+            <Label fx:id="balance" layoutX="456.0" layoutY="105.0" style="-fx-text-fill: white;" text="Point : 1000" textFill="WHITE">
               <font>
                 <Font name="Ubuntu Regular" size="32.0" />
               </font>

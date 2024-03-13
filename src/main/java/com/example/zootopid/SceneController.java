@@ -1,5 +1,6 @@
 package com.example.zootopid;
 
+import com.zootopid.client.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -24,7 +25,7 @@ public class SceneController {
         stage.show();
     }
     @FXML
-    public void switchToStore(ActionEvent event) throws  IOException {
+    public void switchToStore(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("ticketprice.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -40,4 +41,5 @@ public class SceneController {
         stage.setScene(scene);
         stage.show();
     }
+
 }
