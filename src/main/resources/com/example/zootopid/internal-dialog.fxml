@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.DialogPane?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -27,32 +29,27 @@
                         <Image url="@../../../image/animal/deer/deer.png" />
                      </image>
                   </ImageView>
-                  <Label fx:id="animal_name" layoutX="44.0" layoutY="4.0" text="Animal Name">
+                  <Label fx:id="animal_name" layoutX="44.0" layoutY="15.0" text="DEER">
                      <font>
-                        <Font size="58.0" />
+                        <Font name="System Bold" size="58.0" />
                      </font>
                   </Label>
-                  <Label layoutX="46.0" layoutY="482.0" text="Animal Name">
+                  <Label fx:id="zone_name" layoutX="589.0" layoutY="26.0" prefHeight="57.0" prefWidth="130.0" text="ZONE B">
                      <font>
-                        <Font size="32.0" />
+                        <Font name="System Bold" size="32.0" />
                      </font>
                   </Label>
-                  <Label fx:id="zone_name" layoutX="615.0" layoutY="482.0" text="Zone B">
-                     <font>
-                        <Font size="32.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="46.0" layoutY="537.0" text="Detail">
+                  <Label layoutX="46.0" layoutY="508.0" text="Detail">
                      <font>
                         <Font size="32.0" />
                      </font>
                   </Label>
-                  <Label layoutX="395.0" layoutY="536.0" text="Near Location">
+                  <Label layoutX="395.0" layoutY="506.0" text="Near Location">
                      <font>
                         <Font size="32.0" />
                      </font>
                   </Label>
-                  <AnchorPane fx:id="pane_1" layoutX="51.0" layoutY="590.0" prefHeight="230.0" prefWidth="311.0" style="-fx-background-color: green; -fx-background-radius: 8;">
+                  <AnchorPane fx:id="pane_1" layoutX="39.0" layoutY="547.0" prefHeight="230.0" prefWidth="311.0" style="-fx-background-color: green; -fx-background-radius: 8;">
                      <children>
                         <Label layoutX="25.0" layoutY="10.0" text="Size">
                            <font>
@@ -86,26 +83,34 @@
                         </Label>
                         <Pane layoutX="8.0" layoutY="87.0" prefHeight="132.0" prefWidth="295.0" style="-fx-background-color: white; -fx-background-radius: 8;">
                            <children>
-                              <TextFlow layoutX="5.0" layoutY="5.0" prefHeight="125.0" prefWidth="283.0">
-                                 <children>
-                                    <Text fx:id="description" strokeType="OUTSIDE" strokeWidth="0.0" text="adgadsgasdngldasgkdasngkdsangaskdgndsaklgnl;sadngkdsanglksadnglkdsag" wrappingWidth="280.0458984375">
-                                       <font>
-                                          <Font name="Al Bayan Bold" size="18.0" />
-                                       </font>
-                                    </Text>
-                                 </children>
-                              </TextFlow>
+                              <ScrollPane prefHeight="132.0" prefWidth="295.0">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="132.0" prefWidth="295.0">
+                                       <children>
+                                          <TextFlow prefHeight="125.0" prefWidth="283.0">
+                                             <children>
+                                                <Text fx:id="description" strokeType="OUTSIDE" strokeWidth="0.0" text="adgadsgasdngldasgkdasngkdsangaskdgndsaklgnl;sadngkdsanglksadnglkdsag" wrappingWidth="280.0458984375">
+                                                   <font>
+                                                      <Font name="Al Bayan Plain" size="18.0" />
+                                                   </font>
+                                                </Text>
+                                             </children>
+                                          </TextFlow>
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                              </ScrollPane>
                            </children>
                         </Pane>
                      </children>
                   </AnchorPane>
-                  <AnchorPane fx:id="pane_2" layoutX="392.0" layoutY="590.0" prefHeight="230.0" prefWidth="311.0" style="-fx-background-color: green; -fx-background-radius: 8;">
+                  <AnchorPane fx:id="pane_2" layoutX="391.0" layoutY="543.0" prefHeight="230.0" prefWidth="311.0" style="-fx-background-color: green; -fx-background-radius: 8;">
                      <children>
-                        <TextFlow layoutX="5.0" layoutY="7.0" prefHeight="217.0" prefWidth="300.0">
+                        <TextFlow layoutX="13.0" layoutY="16.0" prefHeight="217.0" prefWidth="300.0">
                            <children>
                               <Text fx:id="near_by" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
                                  <font>
-                                    <Font size="30.0" />
+                                    <Font size="25.0" />
                                  </font></Text>
                            </children>
                         </TextFlow>

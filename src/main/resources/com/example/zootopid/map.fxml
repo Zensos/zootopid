@@ -189,6 +189,15 @@
                         </ImageView>
                      </graphic>
                   </Button>
+                  <Button layoutX="1516.0" layoutY="235.0" mnemonicParsing="false" onAction="#toggleAquarium" prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: transparent;" />
+                  <Button layoutX="1679.0" layoutY="41.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="60.0" style="-fx-background-color: #76453B;" text="A" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Button>
+                  <Button layoutX="1749.0" layoutY="41.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="60.0" style="-fx-background-color: #76453B;" text="F" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Button>
                </children>
             </Pane>
          </children>

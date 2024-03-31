@@ -30,7 +30,12 @@
                 <Blend />
               </effect>
             </Circle>
-            <Label layoutX="132.0" layoutY="105.0" style="-fx-text-fill: white;" text="Username" textFill="WHITE">
+                  <ImageView fitHeight="23.0" fitWidth="158.0" layoutX="33.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../image/icon/logo.png" />
+                     </image>
+                  </ImageView>
+            <Label fx:id="username_label" layoutX="132.0" layoutY="105.0" style="-fx-text-fill: white;" text="Username" textFill="WHITE">
               <font>
                 <Font name="Ubuntu Regular" size="32.0" />
               </font>
@@ -40,34 +45,34 @@
                 <Font name="Ubuntu Regular" size="32.0" />
               </font>
             </Label>
-            <Label layoutX="34.0" layoutY="182.0" style="-fx-text-fill: white;" text="My Coupon" textFill="WHITE">
+            <Label layoutX="34.0" layoutY="182.0" style="-fx-text-fill: white;" text="My Ticket" textFill="WHITE">
               <font>
                 <Font name="Ubuntu Regular" size="28.0" />
               </font>
             </Label>
-            <Label layoutX="339.0" layoutY="182.0" style="-fx-text-fill: white;" text="My History" textFill="WHITE">
+            <Label layoutX="339.0" layoutY="182.0" style="-fx-text-fill: white;" text="My Reward" textFill="WHITE">
               <font>
                 <Font name="Ubuntu Regular" size="28.0" />
               </font>
             </Label>
             <AnchorPane layoutX="34.0" layoutY="232.0" prefHeight="183.0" prefWidth="297.0">
               <children>
-                <TableView fx:id="couponTable" layoutX="-3.0" prefHeight="183.0" prefWidth="297.0" style="-fx-background-color: #DCCFBF;">
+                <TableView fx:id="ticket_table" layoutX="-3.0" prefHeight="183.0" prefWidth="297.0" style="-fx-background-color: #DCCFBF;">
                   <columns>
-                    <TableColumn fx:id="typeCoupon" maxWidth="144.00006103515625" minWidth="144.00006103515625" prefWidth="144.00006103515625" resizable="false" text="TYPE" />
-                    <TableColumn fx:id="amountCoupon" maxWidth="67.199951171875" minWidth="67.199951171875" prefWidth="67.199951171875" resizable="false" sortable="false" style="fx-positon: Center;" text="AMOUNT" />
-                    <TableColumn fx:id="dateCoupon" maxWidth="84.80001220703127" minWidth="84.80001220703127" prefWidth="84.80001220703127" resizable="false" text="DATE" />
+                    <TableColumn fx:id="ticket_type" maxWidth="144.00006103515625" minWidth="144.00006103515625" prefWidth="144.00006103515625" resizable="false" text="TYPE" />
+                    <TableColumn fx:id="ticket_amount" maxWidth="67.199951171875" minWidth="67.199951171875" prefWidth="67.199951171875" resizable="false" sortable="false" style="fx-positon: Center;" text="AMOUNT" />
+                    <TableColumn fx:id="ticket_date" maxWidth="84.80001220703127" minWidth="84.80001220703127" prefWidth="84.80001220703127" resizable="false" text="DATE" />
                   </columns>
                 </TableView>
               </children>
             </AnchorPane>
             <AnchorPane layoutX="339.0" layoutY="232.0" prefHeight="183.0" prefWidth="270.0">
               <children>
-                <TableView fx:id="historyTable" prefHeight="183.0" prefWidth="297.0" style="-fx-background-color: #DCCFBF;">
+                <TableView fx:id="reward_table" prefHeight="183.0" prefWidth="297.0" style="-fx-background-color: #DCCFBF;">
                   <columns>
-                    <TableColumn fx:id="typeHistory" prefWidth="144.00006103515625" resizable="false" text="TYPE" />
-                    <TableColumn fx:id="amountHistory" maxWidth="67.199951171875" minWidth="67.199951171875" prefWidth="67.199951171875" resizable="false" sortable="false" style="fx-positon: Center;" text="AMOUNT" />
-                    <TableColumn fx:id="dateHistory" maxWidth="84.80001220703127" minWidth="84.80001220703127" prefWidth="84.80007324218752" resizable="false" text="DATE" />
+                    <TableColumn fx:id="reward_type" prefWidth="144.00006103515625" resizable="false" text="TYPE" />
+                    <TableColumn fx:id="reward_amount" maxWidth="67.199951171875" minWidth="67.199951171875" prefWidth="67.199951171875" resizable="false" sortable="false" style="fx-positon: Center;" text="AMOUNT" />
+                    <TableColumn fx:id="reward_date" maxWidth="84.80001220703127" minWidth="84.80001220703127" prefWidth="84.80007324218752" resizable="false" text="DATE" />
                   </columns>
                 </TableView>
               </children>
@@ -81,7 +86,7 @@
               <children>
                 <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="21.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                   <image>
-                    <Image url="@../../../image/icon/house.png" />
+                    <Image url="@../../../image/rewards/icon/backpack.png" />
                   </image>
                 </ImageView>
                 <Button fx:id="exchangeBtn1" alignment="CENTER" layoutX="21.0" layoutY="107.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: white; -fx-text-fill: black; -fx-font-family: Inter SemiBold; -fx-background-radius: 8;" text="แลก" textFill="#030303">
@@ -91,7 +96,7 @@
                 </Button>
                 <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="178.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                   <image>
-                    <Image url="@../../../image/icon/house.png" />
+                    <Image url="@../../../image/rewards/icon/bicycle.png" />
                   </image>
                 </ImageView>
                 <Button fx:id="exchangeBtn2" layoutX="178.0" layoutY="107.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: white; -fx-text-fill: black; -fx-font-family: Inter SemiBold; -fx-background-radius: 8;" text="แลก" textFill="#030303">
@@ -101,7 +106,7 @@
                 </Button>
                 <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="335.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                   <image>
-                    <Image url="@../../../image/icon/house.png" />
+                    <Image url="@../../../image/rewards/icon/panda.png" />
                   </image>
                 </ImageView>
                 <Button fx:id="exchangeBtn3" layoutX="335.0" layoutY="107.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: white; -fx-text-fill: black; -fx-font-family: Inter SemiBold; -fx-background-radius: 8;" text="แลก" textFill="#030303">
@@ -111,7 +116,7 @@
                 </Button>
                 <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="492.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                   <image>
-                    <Image url="@../../../image/icon/house.png" />
+                    <Image url="@../../../image/rewards/icon/pencil.png" />
                   </image>
                 </ImageView>
                 <Button fx:id="exchangeBtn4" layoutX="492.0" layoutY="107.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: white; -fx-text-fill: black; -fx-font-family: Inter SemiBold; -fx-background-radius: 8;" text="แลก" textFill="#030303">
@@ -121,7 +126,7 @@
                 </Button>
                 <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="21.0" layoutY="173.0" pickOnBounds="true" preserveRatio="true">
                   <image>
-                    <Image url="@../../../image/icon/house.png" />
+                    <Image url="@../../../image/rewards/icon/penguin.png" />
                   </image>
                 </ImageView>
                 <Button fx:id="exchangeBtn5" layoutX="21.0" layoutY="266.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: white; -fx-text-fill: black; -fx-font-family: Inter SemiBold; -fx-background-radius: 8;" text="แลก" textFill="#030303">
@@ -131,7 +136,7 @@
                 </Button>
                 <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="178.0" layoutY="173.0" pickOnBounds="true" preserveRatio="true">
                   <image>
-                    <Image url="@../../../image/icon/house.png" />
+                    <Image url="@../../../image/rewards/icon/seal.png" />
                   </image>
                 </ImageView>
                 <Button fx:id="exchangeBtn6" layoutX="178.0" layoutY="266.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: white; -fx-text-fill: black; -fx-font-family: Inter SemiBold; -fx-background-radius: 8;" text="แลก" textFill="#030303">
@@ -141,7 +146,7 @@
                 </Button>
                 <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="335.0" layoutY="173.0" pickOnBounds="true" preserveRatio="true">
                   <image>
-                    <Image url="@../../../image/icon/house.png" />
+                    <Image url="@../../../image/rewards/icon/ticket.png" />
                   </image>
                 </ImageView>
                 <Button fx:id="exchangeBtn7" layoutX="335.0" layoutY="266.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: white; -fx-text-fill: black; -fx-font-family: Inter SemiBold; -fx-background-radius: 8;" text="แลก" textFill="#030303">
@@ -151,7 +156,7 @@
                 </Button>
                 <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="492.0" layoutY="173.0" pickOnBounds="true" preserveRatio="true">
                   <image>
-                    <Image url="@../../../image/icon/house.png" />
+                    <Image url="@../../../image/rewards/icon/wristband.png" />
                   </image>
                 </ImageView>
                 <Button fx:id="exchangeBtn8" layoutX="492.0" layoutY="266.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: white; -fx-text-fill: black; -fx-font-family: Inter SemiBold; -fx-background-radius: 8;" text="แลก" textFill="#030303">
@@ -163,29 +168,32 @@
             </AnchorPane>
           </children>
         </Pane>
-        <Button layoutX="662.0" layoutY="912.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="596.0" style="-fx-background-color: #DDE67F; -fx-background-radius: 8; -fx-font-family: Inter SemiBold; -fx-font-size: 18; -fx-font-weight: normal; -fx-text-alignment: left; -fx-text-fill: black;" text="LogOut" />
+        <Button layoutX="662.0" layoutY="912.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="596.0" style="-fx-background-color: #DDE67F; -fx-background-radius: 8; -fx-font-family: Inter SemiBold; -fx-font-size: 18; -fx-font-weight: normal; -fx-text-alignment: left; -fx-text-fill: black;" text="LOGOUT">
+               <font>
+                  <Font name="System Bold" size="37.0" />
+               </font></Button>
       </children>
     </AnchorPane>
   </center>
   <top>
     <AnchorPane prefHeight="60.0" prefWidth="1920.0" style="-fx-background-color: #F8FAE5;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
       <children>
-        <Button onAction="#switchToMap" layoutX="274.0" layoutY="15.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #43766C;" text="Map" textAlignment="CENTER" textFill="WHITE">
+        <Button layoutX="274.0" layoutY="15.0" mnemonicParsing="false" onAction="#switchToMap" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #43766C;" text="Map" textAlignment="CENTER" textFill="WHITE">
           <font>
             <Font name="Inter SemiBold" size="12.0" />
           </font>
         </Button>
-        <Button onAction="#switchToStore" layoutX="479.0" layoutY="15.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #43766C;" text="Service" textFill="WHITE">
+        <Button layoutX="479.0" layoutY="15.0" mnemonicParsing="false" onAction="#switchToStore" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #43766C;" text="Service" textFill="WHITE">
           <font>
             <Font name="Inter SemiBold" size="12.0" />
           </font>
         </Button>
-        <Button onAction="#switchToProfile" alignment="CENTER" layoutX="684.0" layoutY="15.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #43766C;" text="Logout" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+        <Button alignment="CENTER" layoutX="684.0" layoutY="15.0" mnemonicParsing="false" onAction="#switchToProfile" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #43766C;" text="Logout" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
           <font>
             <Font name="Inter SemiBold" size="12.0" />
           </font>
         </Button>
-        <Button onAction="#switchToProfile" alignment="CENTER" layoutX="1636.0" layoutY="15.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #43766C;" text="Profile" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+        <Button alignment="CENTER" layoutX="1636.0" layoutY="15.0" mnemonicParsing="false" onAction="#switchToProfile" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #43766C;" text="Profile" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
           <font>
             <Font name="Inter SemiBold" size="12.0" />
           </font>

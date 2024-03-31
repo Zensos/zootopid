@@ -3,14 +3,15 @@ package com.example.zootopid;
 import com.zootopid.client.User;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import javafx.stage.Modality;
 
 import java.io.IOException;
+import java.util.Date;
 
 public class StoreController extends SceneController {
 
@@ -22,8 +23,6 @@ public class StoreController extends SceneController {
 
     @FXML
     protected Button submit;
-    @FXML
-    protected Label balance;
 
     LocalStorage localStorage = LocalStorage.getInstance();
 
@@ -82,8 +81,15 @@ public class StoreController extends SceneController {
 
     }
 
+    @FXML
     public void purchase() throws IOException {
-        localStorage.getUser().setPoint(localStorage.getUser().getPoint() + 10);
+        double total = Double.parseDouble(this.total.getText());
+        if(total > 0 && localStorage.getUser().getPoint() >= total) {
+            AuthController.tickets.add(new Ticket("สวนสัตว์", total, new Date()));
+            loadSuccess();
+        } else {
+            loadError();
+        }
     }
 
 }

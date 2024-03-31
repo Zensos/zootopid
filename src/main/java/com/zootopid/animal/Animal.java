@@ -4,19 +4,20 @@ import java.util.ArrayList;
 
 public abstract class Animal {
     private String name, description, nearby_animals;
+    private int size, age, rate;
     private Zone zone;
     public Animal() {
-        this("", null);
+        this("",null);
     }
 
-    public Animal(String name, Zone zone) {
+    public Animal(String name,Zone zone) {
         this.name = name;
         this.zone = zone;
         this.nearby_animals = "";
     }
 
-    public void addNearByAnimals(String anm_name, double range) {
-        this.nearby_animals += anm_name + "         " + range + "\n";
+    public void setNearby_animals(String value) {
+        this.nearby_animals = value;
     }
 
     public String getNearByAnimals() {
@@ -29,5 +30,41 @@ public abstract class Animal {
 
     public Zone getZone() {
         return this.zone;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public int getRate() {
+        return rate;
+    }
+
+    public int getSize() {
+        return size;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setRate(int rate) {
+        this.rate = rate;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setSize(int size) {
+        this.size = size;
     }
 }

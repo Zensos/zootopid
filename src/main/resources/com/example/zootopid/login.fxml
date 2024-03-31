@@ -3,6 +3,7 @@
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -51,7 +52,7 @@
                         </TextField>
                         <Button layoutX="54.0" layoutY="379.0" mnemonicParsing="false" onAction="#signIn" prefHeight="39.0" prefWidth="440.0" style="-fx-background-color: DDE67F;" text="Login" textFill="#b168ff" textOverrun="CLIP">
                            <font>
-                              <Font name="AngsanaUPC Bold" size="22.0" />
+                              <Font name="System Bold" size="25.0" />
                            </font>
                         </Button>
                         <PasswordField fx:id="password" layoutX="50.0" layoutY="305.0" prefHeight="39.0" prefWidth="440.0" promptText="Password" style="-fx-background-color: DCCFBF; -fx-border-color: #B19470;">
@@ -66,9 +67,9 @@
                            <children>
                               <BorderPane prefHeight="45.0" prefWidth="200.0">
                                  <left>
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="เกี่ยวกับ Zootopid" BorderPane.alignment="CENTER">
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="About Zootopid" BorderPane.alignment="CENTER">
                                        <font>
-                                          <Font name="AngsanaUPC Bold Italic" size="36.0" />
+                                          <Font name="System Bold" size="36.0" />
                                        </font>
                                     </Text>
                                  </left>
@@ -78,11 +79,11 @@
                         <Pane layoutX="50.0" layoutY="530.0" prefHeight="200.0" prefWidth="440.0">
                            <children>
                               <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c3dcd7" height="200.0" stroke="BLACK" strokeType="INSIDE" width="440.0" />
-                              <Text layoutX="127.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NIGGAAAA">
+                              <TextArea layoutY="1.0" prefHeight="200.0" prefWidth="440.0" style="-fx-background-color: transparent;" text="แบบจำลองแผนที่สวนสัตว์ แสดงรายละเอียดของสัตว์และ facility ตามจุดต่างๆ รวมไปถึงการจองส่วนบริการต่างๆภายในสวนสัตว์  ไม่ว่าจะเป็น ตั๋วเข้าชม ตั๋วการแสดง เรือเป็น และรถทัวร์สวนสัตว์&#10;" wrapText="true">
                                  <font>
-                                    <Font name="AngsanaUPC Bold Italic" size="38.0" />
+                                    <Font size="20.0" />
                                  </font>
-                              </Text>
+                              </TextArea>
                            </children>
                         </Pane>
                         <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="196.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">

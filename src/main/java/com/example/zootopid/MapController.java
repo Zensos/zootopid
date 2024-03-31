@@ -42,7 +42,7 @@ public class MapController extends SceneController {
         // aquarium
         animals.put("dolphin", Dolphin.class);
         animals.put("jellyfish", JellyFish.class);
-        animals.put("neemo", Neemo.class);
+        animals.put("nemo", Nemo.class);
         animals.put("octopus", Octopus.class);
         animals.put("pufferfish", PufferFish.class);
         animals.put("shark", Shark.class);
@@ -78,6 +78,23 @@ public class MapController extends SceneController {
         animals.put("crocodile", Crocodile.class);
         animals.put("flamingo", Flamingo.class);
         animals.put("hippo", Hippo.class);
+    }
+
+    @FXML
+    protected void toggleAquarium(ActionEvent event) throws IOException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("aquarium.fxml"));
+        DialogPane dialogPane = fxmlLoader.load();
+        Dialog dialog = new Dialog();
+        dialog.setDialogPane(dialogPane);
+
+        dialog.initModality(Modality.APPLICATION_MODAL);
+        Button closeButton = new Button();
+        closeButton.setOnAction(e -> {
+            ((Button) e.getSource()).getScene().getWindow().hide();
+        });
+        closeButton.setVisible(false);
+        dialogPane.getButtonTypes().add(ButtonType.CLOSE);
+        dialog.showAndWait();
 
     }
 
@@ -89,7 +106,6 @@ public class MapController extends SceneController {
         Object instance = clazz.getDeclaredConstructor().newInstance();
         Animal animal = (Animal)instance;
         Zone zone = animal.getZone();
-
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("internal-dialog.fxml"));
         fxmlLoader.setController(this);
         DialogPane dialogPane = fxmlLoader.load();
@@ -98,26 +114,28 @@ public class MapController extends SceneController {
 
 
         if(animal.getZone().getZoneName().toLowerCase().equals("green")) {
-            Image bgImage = new Image(getClass().getResourceAsStream("/image/background/" + zone.getZoneName().toLowerCase() + ".gif"));
+            Image bgImage = new Image(getClass().getResourceAsStream("/image/background/" + changeZone(zone.getZoneName().toLowerCase()) + ".gif"));
             System.out.println(bgImage);
             this.zone_background.setImage(bgImage);
         } else {
-            Image bgImage = new Image(getClass().getResourceAsStream("/image/background/" + zone.getZoneName().toLowerCase() + ".png"));
+            Image bgImage = new Image(getClass().getResourceAsStream("/image/background/" + changeZone(zone.getZoneName().toLowerCase()) + ".png"));
             this.zone_background.setImage(bgImage);
         }
 
 
         Image newImage = new Image(getClass().getResourceAsStream("/image/animal/" + id + "/" + id + ".png"));
-        this.animal_name.setText(id);
+        this.animal_name.setText(id.toUpperCase());
         this.animal_image.setImage(newImage);
-        this.zone_name.setText("Zone " + zone.getZoneName().substring(0, 1));
+        this.zone_name.setText("ZONE " + zone.getZoneName().substring(0, 1));
         this.pane_1.setStyle("-fx-background-color:" + changeColor(zone.getZoneName()) + ";-fx-background-radius:8");
         this.pane_2.setStyle("-fx-background-color:" + changeColor(zone.getZoneName()) + ";-fx-background-radius:8");
-        this.description.setText("dagdasgasgdsag");
+        this.description.setText(animal.getDescription());
         this.near_by.setText(animal.getNearByAnimals());
 
         dialog.initModality(Modality.APPLICATION_MODAL);
         Button closeButton = new Button();
+        closeButton.setStyle("-fx-background-color: DCCFBF;");
+        closeButton.setText("CLOSE");
         closeButton.setOnAction(e -> {
             ((Button) e.getSource()).getScene().getWindow().hide();
         });
@@ -137,7 +155,16 @@ public class MapController extends SceneController {
             case "Blue":
                 return "#BFF0FB";
             default:
-                return "#FDD3C9";
+                System.out.println(zone);
+                return "#63D8F5";
+        }
+    }
+
+    private String changeZone(String zone) {
+        if(zone.equals("red") || zone.equals("blue") || zone.equals("green") || zone.equals("orange")) {
+            return zone;
+        } else {
+            return "aquarium";
         }
     }
 
