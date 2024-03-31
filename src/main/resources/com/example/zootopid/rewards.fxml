@@ -17,22 +17,22 @@
         </Text>
         <ImageView fitHeight="201.0" fitWidth="348.0" layoutX="-9.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../../../image/rewards/big_image/ticket.png" />
+                <Image fx:id="reward_big_image" url="@../../../image/rewards/big_image/ticket.png" />
             </image>
         </ImageView>
-        <Text fill="WHITE" layoutX="38.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Backpack">
+        <Text fill="WHITE" layoutX="38.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" fx:id="reward_name" text="Backpack">
             <font>
                 <Font name="System Bold" size="24.0" />
             </font>
         </Text>
-        <Text fill="#e4ff49" layoutX="192.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10,000 pts">
+        <Text  fill="#e4ff49" layoutX="192.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" fx:id="reward_pts" text="10,000 pts">
             <font>
                 <Font name="System Bold" size="22.0" />
             </font>
         </Text>
         <Pane layoutX="37.0" layoutY="274.0" prefHeight="65.0" prefWidth="259.0" style="-fx-background-color: white;">
             <children>
-                <Text layoutX="14.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A backpack to pack some love.">
+                <Text layoutX="14.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" fx:id="reward_text" text="A backpack to pack some love.">
                     <font>
                         <Font size="18.0" />
                     </font>

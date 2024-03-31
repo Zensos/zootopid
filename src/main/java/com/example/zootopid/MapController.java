@@ -130,7 +130,7 @@ public class MapController extends SceneController {
         this.pane_1.setStyle("-fx-background-color:" + changeColor(zone.getZoneName()) + ";-fx-background-radius:8");
         this.pane_2.setStyle("-fx-background-color:" + changeColor(zone.getZoneName()) + ";-fx-background-radius:8");
         this.description.setText(animal.getDescription());
-        this.near_by.setText(animal.getNearByAnimals());
+        this.near_by.setText(animal.getNearByAnimals().toUpperCase());
 
         dialog.initModality(Modality.APPLICATION_MODAL);
         Button closeButton = new Button();

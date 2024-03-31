@@ -5,12 +5,12 @@ import javafx.beans.Observable;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.ImageView;
+import javafx.scene.text.Text;
 
 import java.io.IOException;
 import java.util.Date;
@@ -23,6 +23,12 @@ public class AuthController extends SceneController {
 
     @FXML
     protected Label username_label, balance;
+
+    @FXML
+    protected ImageView reward_big_image;
+
+    @FXML
+    protected Text reward_name, reward_pts, reward_text;
 
     @FXML
     protected TableView reward_table;
@@ -48,9 +54,24 @@ public class AuthController extends SceneController {
     LocalStorage localStorage = LocalStorage.getInstance();
 
     @FXML
+    public void toggleRedeem(Event event) {
+        Button source = (Button) event.getSource();
+        String id = source.getId();
+        changeReward(id);
+    }
+
+    public void changeReward(String reward) {
+        if(reward.equals("penguin")) {
+            this.reward_name.setText("Penguin");
+            this.reward_pts.setText("10000 pts");
+            this.reward_text.setText("Penguin with a beanie");
+        }
+    }
+
+    @FXML
     public void initialize() {
         if(localStorage.getUser() != null) {
-            this.balance.setText(localStorage.getUser().getPoint() + "");
+            this.balance.setText(localStorage.getUser().getPoint() + " PTS");
             this.username_label.setText(localStorage.getUser().getUsername());
             reward_type.setCellValueFactory(new PropertyValueFactory<Reward, String>("type"));
             reward_amount.setCellValueFactory(new PropertyValueFactory<Reward, Double>("amount"));
