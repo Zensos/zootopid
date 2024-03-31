@@ -131,7 +131,7 @@ public class MapController extends SceneController {
 
 
         Image newImage = new Image(getClass().getResourceAsStream("/image/animal/" + id + "/" + id + ".png"));
-        this.animal_name.setText(id.toUpperCase());
+        this.animal_name.setText(animal.getName());
         this.animal_image.setImage(newImage);
         this.zone_name.setText("ZONE " + zone.getZoneName().substring(0, 1));
         this.pane_1.setStyle("-fx-background-color:" + changeColor(zone.getZoneName()) + ";-fx-background-radius:8");
