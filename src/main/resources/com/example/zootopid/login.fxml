@@ -79,7 +79,7 @@
                         <Pane layoutX="50.0" layoutY="530.0" prefHeight="200.0" prefWidth="440.0">
                            <children>
                               <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c3dcd7" height="200.0" stroke="BLACK" strokeType="INSIDE" width="440.0" />
-                              <TextArea layoutY="1.0" prefHeight="200.0" prefWidth="440.0" style="-fx-background-color: transparent;" text="แบบจำลองแผนที่สวนสัตว์ แสดงรายละเอียดของสัตว์และ facility ตามจุดต่างๆ รวมไปถึงการจองส่วนบริการต่างๆภายในสวนสัตว์  ไม่ว่าจะเป็น ตั๋วเข้าชม ตั๋วการแสดง เรือเป็น และรถทัวร์สวนสัตว์&#10;" wrapText="true">
+                              <TextArea layoutY="1.0" prefHeight="200.0" prefWidth="440.0" style="-fx-background-color: transparent;" text="แบบจำลองแผนที่สวนสัตว์ แสดงรายละเอียดของสัตว์และ facility ตามจุดต่างๆ รวมไปถึงการจองส่วนบริการต่างๆภายในสวนสัตว์  ไม่ว่าจะเป็น ตั๋วเข้าชม ตั๋วการแสดง เรือเป็ด และรถทัวร์สวนสัตว์&#10;" wrapText="true">
                                  <font>
                                     <Font size="20.0" />
                                  </font>

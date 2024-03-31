@@ -14,7 +14,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
+import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Modality;
 
@@ -26,6 +28,9 @@ import java.util.Map;
 public class MapController extends SceneController {
     @FXML
     private Label animal_name;
+
+    @FXML
+    private GridPane nearby;
     @FXML
     private ImageView animal_image, zone_background;
     @FXML
@@ -35,6 +40,9 @@ public class MapController extends SceneController {
 
     @FXML
     private Text description, near_by;
+
+    @FXML
+    private Button close_button;
 
     private Map<String, Class<?>> animals = new HashMap<>();
 
@@ -115,7 +123,6 @@ public class MapController extends SceneController {
 
         if(animal.getZone().getZoneName().toLowerCase().equals("green")) {
             Image bgImage = new Image(getClass().getResourceAsStream("/image/background/" + changeZone(zone.getZoneName().toLowerCase()) + ".gif"));
-            System.out.println(bgImage);
             this.zone_background.setImage(bgImage);
         } else {
             Image bgImage = new Image(getClass().getResourceAsStream("/image/background/" + changeZone(zone.getZoneName().toLowerCase()) + ".png"));
@@ -130,17 +137,23 @@ public class MapController extends SceneController {
         this.pane_1.setStyle("-fx-background-color:" + changeColor(zone.getZoneName()) + ";-fx-background-radius:8");
         this.pane_2.setStyle("-fx-background-color:" + changeColor(zone.getZoneName()) + ";-fx-background-radius:8");
         this.description.setText(animal.getDescription());
-        this.near_by.setText(animal.getNearByAnimals().toUpperCase());
+        String[] val = animal.getNearByAnimals().split("\n");
+        for(int i = 0; i < val.length;i++) {
+            String[] splitted = val[i].split(" ");
+            Label label1 = new Label(splitted[0]);
+            Label label2 = new Label(" ".repeat(6) + splitted[1]);
+            label1.setPrefSize(100, 30);
+            label2.setPrefSize(100, 30);
+            label1.setFont(Font.font("Arial", 20));
+            label2.setFont(Font.font("Arial", 20));
 
-        dialog.initModality(Modality.APPLICATION_MODAL);
-        Button closeButton = new Button();
-        closeButton.setStyle("-fx-background-color: DCCFBF;");
-        closeButton.setText("CLOSE");
-        closeButton.setOnAction(e -> {
+            nearby.add(label1, 0, i);
+            nearby.add(label2, 1, i);
+        }
+        this.close_button.setOnAction(e -> {
             ((Button) e.getSource()).getScene().getWindow().hide();
         });
-        closeButton.setVisible(false);
-        dialogPane.getButtonTypes().add(ButtonType.CLOSE);
+        dialog.initModality(Modality.APPLICATION_MODAL);
         dialog.showAndWait();
 
     }
@@ -155,7 +168,6 @@ public class MapController extends SceneController {
             case "Blue":
                 return "#BFF0FB";
             default:
-                System.out.println(zone);
                 return "#63D8F5";
         }
     }

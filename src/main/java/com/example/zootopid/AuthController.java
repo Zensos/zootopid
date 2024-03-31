@@ -7,10 +7,14 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.text.Font;
 import javafx.scene.text.Text;
+import javafx.stage.Modality;
 
 import java.io.IOException;
 import java.util.Date;
@@ -25,10 +29,13 @@ public class AuthController extends SceneController {
     protected Label username_label, balance;
 
     @FXML
-    protected ImageView reward_big_image;
+    protected Button close_reward, redeem_reward;
 
     @FXML
-    protected Text reward_name, reward_pts, reward_text;
+    private ImageView reward_big_image;
+
+    @FXML
+    private Text reward_name, reward_pts, reward_text;
 
     @FXML
     protected TableView reward_table;
@@ -54,20 +61,85 @@ public class AuthController extends SceneController {
     LocalStorage localStorage = LocalStorage.getInstance();
 
     @FXML
-    public void toggleRedeem(Event event) {
-        Button source = (Button) event.getSource();
-        String id = source.getId();
-        changeReward(id);
+    public void toggleRedeem(ActionEvent event) throws IOException {
+        try {
+            Button source = (Button) event.getSource();
+            String id = source.getId();
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("rewards.fxml"));
+            fxmlLoader.setController(this);
+            DialogPane dialogPane = fxmlLoader.load();
+            Dialog dialog = new Dialog();
+            dialog.setDialogPane(dialogPane);
+            changeReward(id);
+
+            this.close_reward.setOnAction(e -> {
+                ((Button) e.getSource()).getScene().getWindow().hide();
+            });
+            this.redeem_reward.setOnAction(e -> {
+                try {
+                    if(localStorage.getUser().getPoint() >= Double.parseDouble(this.reward_pts.getText().replace("pts", ""))) {
+                        redeemReward();
+                        loadSuccess();
+                        ((Button) e.getSource()).getScene().getWindow().hide();
+                    } else {
+                        loadError();
+                        ((Button) e.getSource()).getScene().getWindow().hide();
+                    }
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
+
+            });
+            dialog.initModality(Modality.APPLICATION_MODAL);
+            dialog.showAndWait();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void redeemReward() {
+        localStorage.getUser().decrement(Double.parseDouble(this.reward_pts.getText().replace("pts", "")));
+        AuthController.rewards.add(new Reward(this.reward_name.getText(), Double.parseDouble(this.reward_pts.getText().replace("pts", "")), new Date()));
+        this.balance.setText(localStorage.getUser().getPoint() + " PTS");
     }
 
     public void changeReward(String reward) {
         if(reward.equals("penguin")) {
-            this.reward_name.setText("Penguin");
-            this.reward_pts.setText("10000 pts");
-            this.reward_text.setText("Penguin with a beanie");
-        }
+                this.reward_name.setText("Penguin");
+                this.reward_pts.setText("10000 pts");
+                this.reward_text.setText("Penguin with a beanie");
+            } else if (reward.equals("panda")) {
+                this.reward_name.setText("Panda");
+                this.reward_pts.setText("10000 pts");
+                this.reward_text.setText("Our precious pookie panda doll");
+            } else if (reward.equals("seal")) {
+                this.reward_name.setText("Seal");
+                this.reward_pts.setText("10000 pts");
+                this.reward_text.setText("Adolescent rounded seal");
+            } else if (reward.equals("ticket")) {
+                this.reward_name.setText("Ticket Pass");
+                this.reward_pts.setText("20000 pts");
+                this.reward_text.setText("1 free Zootopid ticket pass");
+            } else if (reward.equals("bicycle")) {
+                this.reward_name.setText("Bicycle");
+                this.reward_pts.setText("25000 pts");
+                this.reward_text.setText("Our Biggest Reward for you");
+            } else if (reward.equals("wristband")) {
+                this.reward_name.setText("Wrist Band");
+                this.reward_pts.setText("15000 pts");
+                this.reward_text.setText("Our very own signature wristband");
+            } else if (reward.equals("backpack")) {
+                this.reward_name.setText("Backpack");
+                this.reward_pts.setText("8000 pts");
+                this.reward_text.setText("A backpack to pack some love.");
+            } else if (reward.equals("pencil")) {
+                this.reward_name.setText("Pencil");
+                this.reward_pts.setText("5000 pts");
+                this.reward_text.setText("A pencil to express your feelings.");
+            }
+        Image bgImage = new Image(getClass().getResourceAsStream("/image/rewards/big_image/" + reward + ".png"));
+        this.reward_big_image.setImage(bgImage);
     }
-
     @FXML
     public void initialize() {
         if(localStorage.getUser() != null) {
@@ -99,6 +171,8 @@ public class AuthController extends SceneController {
             localStorage.setUser(new User("zootopid", "zootopid1", "0999999999", "MEMBER"));
             this.switchToMap(event);
         }
+        this.switchToMap(event);
+
     }
 
 }

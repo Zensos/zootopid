@@ -1,12 +1,11 @@
 package com.zootopid.client;
 
 
-public class User implements PaymentMethod {
+public class User implements Payment {
     private String username;
     private String password;
     private String tel;
-    private int point = 100;
-    private int balance = 100;
+    private int point = 10000;
     private String role;
 
     public User(String username, String password, String tel, String role) {
@@ -40,6 +39,16 @@ public class User implements PaymentMethod {
     @Override
     public void decrement(double amount) {
         this.point -= amount;
+    }
+
+    @Override
+    public void increment(String amount) {
+        this.point += Double.parseDouble(amount);
+    }
+
+    @Override
+    public void decrement(String amount) {
+        this.point -= Double.parseDouble(amount);
     }
 }
 

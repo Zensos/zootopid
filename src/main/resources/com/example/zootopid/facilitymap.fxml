@@ -14,7 +14,7 @@
          <children>
             <ImageView fitHeight="1080.0" fitWidth="1920.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../Documents/zootopid/src/main/resources/image/map.png" />
+                  <Image url="@../../../image/map.png" />
                </image>
             </ImageView>
             <Pane prefHeight="1080.0" prefWidth="1938.0" style="-fx-background-color: transparent;">
@@ -22,7 +22,7 @@
                   <Button layoutX="1516.0" layoutY="235.0" mnemonicParsing="false" onAction="#toggleAquarium" prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: transparent;" />
                   <Button layoutX="1679.0" layoutY="41.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="60.0" style="-fx-background-color: #76453B;" text="A" textFill="WHITE">
                      <font>
-                        <Font size="20.0" />
+                        <Font name="System Bold" size="20.0" />
                      </font></Button>
                   <Button layoutX="1749.0" layoutY="41.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="60.0" style="-fx-background-color: #76453B;" text="F" textFill="WHITE">
                      <font>
@@ -32,7 +32,7 @@
                      <graphic>
                         <ImageView fitHeight="75.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../Documents/zootopid/src/main/resources/image/icon/toilet.png" />
+                              <Image url="@../../../image/icon/toilet.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -41,7 +41,7 @@
                      <graphic>
                         <ImageView fitHeight="73.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../Documents/zootopid/src/main/resources/image/icon/toilet.png" />
+                              <Image url="@../../../image/icon/toilet.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -50,7 +50,7 @@
                      <graphic>
                         <ImageView fitHeight="73.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../Documents/zootopid/src/main/resources/image/icon/toilet.png" />
+                              <Image url="@../../../image/icon/toilet.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -59,7 +59,7 @@
                      <graphic>
                         <ImageView fitHeight="73.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../Documents/zootopid/src/main/resources/image/icon/toilet.png" />
+                              <Image url="@../../../image/icon/toilet.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -68,7 +68,7 @@
                      <graphic>
                         <ImageView fitHeight="73.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../Documents/zootopid/src/main/resources/image/icon/toilet.png" />
+                              <Image url="@../../../image/icon/toilet.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -77,7 +77,7 @@
                      <graphic>
                         <ImageView fitHeight="73.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../Documents/zootopid/src/main/resources/image/icon/toilet.png" />
+                              <Image url="@../../../image/icon/toilet.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -86,7 +86,7 @@
                      <graphic>
                         <ImageView fitHeight="75.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../Documents/zootopid/src/main/resources/image/icon/shop.png" />
+                              <Image url="@../../../image/icon/shop.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -95,7 +95,7 @@
                      <graphic>
                         <ImageView fitHeight="75.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../Documents/zootopid/src/main/resources/image/icon/shop.png" />
+                              <Image url="@../../../image/icon/shop.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -104,7 +104,7 @@
                      <graphic>
                         <ImageView fitHeight="75.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../Documents/zootopid/src/main/resources/image/icon/shop.png" />
+                              <Image url="@../../../image/icon/shop.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -113,7 +113,7 @@
                      <graphic>
                         <ImageView fitHeight="75.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../Documents/zootopid/src/main/resources/image/icon/shop.png" />
+                              <Image url="@../../../image/icon/shop.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -148,7 +148,7 @@
             </Button>
             <ImageView fitHeight="60.0" fitWidth="200.0" layoutX="33.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../Documents/zootopid/src/main/resources/image/icon/logo.png" />
+                  <Image url="@../../../image/icon/logo.png" />
                </image>
             </ImageView>
          </children>

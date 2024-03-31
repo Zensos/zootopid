@@ -4,6 +4,7 @@ import java.util.Date;
 
 public class Reward {
 
+    private  String name;
     private String type;
     private double amount;
     private Date date;
@@ -34,8 +35,11 @@ public class Reward {
         this.date = date;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public void setType(String type) {
         this.type = type;
     }
-
 }

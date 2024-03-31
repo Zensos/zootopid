@@ -86,6 +86,7 @@ public class StoreController extends SceneController {
         double total = Double.parseDouble(this.total.getText());
         if(total > 0 && localStorage.getUser().getPoint() >= total) {
             AuthController.tickets.add(new Ticket("สวนสัตว์", total, new Date()));
+            localStorage.getUser().decrement(total);
             loadSuccess();
         } else {
             loadError();

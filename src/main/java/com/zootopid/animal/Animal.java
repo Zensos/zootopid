@@ -3,7 +3,8 @@ import com.zootopid.zone.Zone;
 import java.util.ArrayList;
 
 public abstract class Animal {
-    private String name, description, nearby_animals;
+    private final String name;
+    private String description, nearby_animals;
     private int size, age, rate;
     private Zone zone;
     public Animal() {
@@ -58,10 +59,6 @@ public abstract class Animal {
 
     public void setAge(int age) {
         this.age = age;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public void setSize(int size) {
