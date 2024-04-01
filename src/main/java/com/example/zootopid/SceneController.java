@@ -72,6 +72,24 @@ public class SceneController {
     }
 
     @FXML
+    public void switchToRental(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("rental_duck.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    public void switchToTransport(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("rental_transport.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
     void close(ActionEvent event) {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.close();

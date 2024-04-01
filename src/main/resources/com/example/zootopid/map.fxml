@@ -162,11 +162,11 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="parrot" layoutX="602.0" layoutY="589.0" mnemonicParsing="false" onAction="#onHelloButtonClick" style="-fx-background-color: transparent;">
+                  <Button fx:id="hummingbird" layoutX="602.0" layoutY="589.0" mnemonicParsing="false" onAction="#onHelloButtonClick" style="-fx-background-color: transparent;">
                      <graphic>
                         <ImageView fitHeight="140.0" fitWidth="187.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../image/animal/parrot/parrot_head.png" />
+                              <Image url="@../../../image/animal/hummingbird/hummingbird_head.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -231,7 +231,7 @@
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
-            <Button layoutX="815.0" layoutY="16.0" mnemonicParsing="false" onAction="#switchToStore" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #43766C;" text="RENTAL" textAlignment="CENTER" textFill="WHITE">
+            <Button layoutX="815.0" layoutY="16.0" mnemonicParsing="false" onAction="#switchToRental" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #43766C;" text="RENTAL" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>

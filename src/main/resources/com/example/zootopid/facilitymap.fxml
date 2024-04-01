@@ -28,7 +28,7 @@
                      <font>
                         <Font name="System Bold Italic" size="20.0" />
                      </font></Button>
-                  <Button fx:id="toilet" layoutX="475.0" layoutY="325.0" mnemonicParsing="false" onAction="#onHelloButtonClick" prefHeight="81.0" prefWidth="131.0" style="-fx-background-color: transparent;">
+                  <Button fx:id="toilet" layoutX="475.0" layoutY="325.0" mnemonicParsing="false" onAction="#toggleToilet" prefHeight="81.0" prefWidth="131.0" style="-fx-background-color: transparent;">
                      <graphic>
                         <ImageView fitHeight="75.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -37,7 +37,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="toilet1" layoutX="895.0" layoutY="496.0" mnemonicParsing="false" onAction="#onHelloButtonClick" prefHeight="81.0" prefWidth="131.0" style="-fx-background-color: transparent;">
+                  <Button fx:id="toilet1" layoutX="895.0" layoutY="496.0" mnemonicParsing="false" onAction="#toggleToilet" prefHeight="81.0" prefWidth="131.0" style="-fx-background-color: transparent;">
                      <graphic>
                         <ImageView fitHeight="73.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -46,7 +46,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="toilet2" layoutX="1299.0" layoutY="232.0" mnemonicParsing="false" onAction="#onHelloButtonClick" prefHeight="81.0" prefWidth="131.0" style="-fx-background-color: transparent;">
+                  <Button fx:id="toilet2" layoutX="1299.0" layoutY="232.0" mnemonicParsing="false" onAction="#toggleToilet" prefHeight="81.0" prefWidth="131.0" style="-fx-background-color: transparent;">
                      <graphic>
                         <ImageView fitHeight="73.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -55,7 +55,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="toilet3" layoutX="730.0" layoutY="670.0" mnemonicParsing="false" onAction="#onHelloButtonClick" prefHeight="81.0" prefWidth="131.0" style="-fx-background-color: transparent;">
+                  <Button fx:id="toilet3" layoutX="730.0" layoutY="670.0" mnemonicParsing="false" onAction="#toggleToilet" prefHeight="81.0" prefWidth="131.0" style="-fx-background-color: transparent;">
                      <graphic>
                         <ImageView fitHeight="73.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -64,7 +64,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="toilet4" layoutX="1212.0" layoutY="845.0" mnemonicParsing="false" onAction="#onHelloButtonClick" prefHeight="53.0" prefWidth="131.0" style="-fx-background-color: transparent;">
+                  <Button fx:id="toilet4" layoutX="1212.0" layoutY="845.0" mnemonicParsing="false" onAction="#toggleToilet" prefHeight="53.0" prefWidth="131.0" style="-fx-background-color: transparent;">
                      <graphic>
                         <ImageView fitHeight="73.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -73,7 +73,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="toilet5" layoutX="141.0" layoutY="670.0" mnemonicParsing="false" onAction="#onHelloButtonClick" prefHeight="81.0" prefWidth="131.0" style="-fx-background-color: transparent;">
+                  <Button fx:id="toilet5" layoutX="141.0" layoutY="670.0" mnemonicParsing="false" onAction="#toggleToilet" prefHeight="81.0" prefWidth="131.0" style="-fx-background-color: transparent;">
                      <graphic>
                         <ImageView fitHeight="73.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -82,16 +82,8 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="shop" layoutX="200.0" layoutY="670.0" mnemonicParsing="false" onAction="#onHelloButtonClick" prefHeight="81.0" prefWidth="131.0" style="-fx-background-color: transparent;">
-                     <graphic>
-                        <ImageView fitHeight="75.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../image/icon/shop.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-                  <Button fx:id="shop1" layoutX="869.0" layoutY="754.0" mnemonicParsing="false" onAction="#onHelloButtonClick" prefHeight="81.0" prefWidth="131.0" style="-fx-background-color: transparent;">
+                  <Button fx:id="shop" layoutX="231.0" layoutY="670.0" mnemonicParsing="false" onAction="#toggleStore" prefHeight="81.0" prefWidth="60.0" style="-fx-background-color: transparent;" />
+                  <Button fx:id="shop1" layoutX="869.0" layoutY="754.0" mnemonicParsing="false" onAction="#toggleStore" prefHeight="81.0" prefWidth="131.0" style="-fx-background-color: transparent;">
                      <graphic>
                         <ImageView fitHeight="75.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -100,7 +92,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="shop2" layoutX="792.0" layoutY="285.0" mnemonicParsing="false" onAction="#onHelloButtonClick" prefHeight="81.0" prefWidth="131.0" style="-fx-background-color: transparent;">
+                  <Button fx:id="shop2" layoutX="792.0" layoutY="285.0" mnemonicParsing="false" onAction="#toggleStore" prefHeight="81.0" prefWidth="131.0" style="-fx-background-color: transparent;">
                      <graphic>
                         <ImageView fitHeight="75.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -109,7 +101,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="shop3" layoutX="1366.0" layoutY="425.0" mnemonicParsing="false" onAction="#onHelloButtonClick" prefHeight="81.0" prefWidth="131.0" style="-fx-background-color: transparent;">
+                  <Button fx:id="shop3" layoutX="1366.0" layoutY="425.0" mnemonicParsing="false" onAction="#toggleStore" prefHeight="81.0" prefWidth="131.0" style="-fx-background-color: transparent;">
                      <graphic>
                         <ImageView fitHeight="75.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -118,6 +110,11 @@
                         </ImageView>
                      </graphic>
                   </Button>
+                  <ImageView fitHeight="75.0" fitWidth="100.0" layoutX="253.0" layoutY="590.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../image/icon/shop.png" />
+                     </image>
+                  </ImageView>
                </children>
             </Pane>
          </children>
@@ -151,7 +148,7 @@
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
-            <Button layoutX="815.0" layoutY="16.0" mnemonicParsing="false" onAction="#switchToStore" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #43766C;" text="RENTAL" textAlignment="CENTER" textFill="WHITE">
+            <Button layoutX="815.0" layoutY="16.0" mnemonicParsing="false" onAction="#switchToRental" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #43766C;" text="RENTAL" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>

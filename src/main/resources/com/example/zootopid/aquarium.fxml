@@ -95,6 +95,14 @@
                               </ImageView>
                            </graphic>
                         </Button>
+                  <Button fx:id="dolphin" layoutX="1084.0" layoutY="260.0" mnemonicParsing="false" onAction="#onHelloButtonClick" style="-fx-background-color: tranparent;">
+                     <graphic>
+                        <ImageView fx:id="dolphin" fitHeight="200.0" fitWidth="200.0">
+                           <image>
+                              <Image url="@../../../image/animal/dolphin/dolphin_head.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
                   <Text layoutX="27.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="AQUARIUM" wrappingWidth="260.8740234375">
                      <font>
                         <Font name="System Bold" size="38.0" />

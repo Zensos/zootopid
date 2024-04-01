@@ -34,7 +34,7 @@ public class MapController extends SceneController {
     @FXML
     private ImageView animal_image, zone_background;
     @FXML
-    private Label zone_name, std_id;
+    private Label zone_name, std_id, animal_details;
     @FXML
     private Pane pane_1, pane_2;
 
@@ -63,13 +63,13 @@ public class MapController extends SceneController {
         animals.put("seal", Seal.class);
 
         // green
-        animals.put("bunny", Bunny.class);
+        animals.put("rabbit", Rabbit.class);
         animals.put("deer", Deer.class);
         animals.put("fox", Fox.class);
         animals.put("koala", Koala.class);
         animals.put("owl", Owl.class);
         animals.put("panda", Panda.class);
-        animals.put("parrot", Parrot.class);
+        animals.put("hummingbird", HummingBird.class);
         animals.put("sheep", Sheep.class);
 
         // orange
@@ -89,7 +89,7 @@ public class MapController extends SceneController {
     }
 
     @FXML
-    protected void toggleAquarium(ActionEvent event) throws IOException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
+    private void toggleAquarium(ActionEvent event) throws IOException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("aquarium.fxml"));
         fxmlLoader.setController(this);
         DialogPane dialogPane = fxmlLoader.load();
@@ -104,7 +104,7 @@ public class MapController extends SceneController {
     }
 
     @FXML
-    protected void onHelloButtonClick(ActionEvent event) throws IOException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
+    private void onHelloButtonClick(ActionEvent event) throws IOException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
         Button action = (Button)event.getSource();
         String id = action.getId();
         Class<?> clazz = animals.get(id);
@@ -116,7 +116,6 @@ public class MapController extends SceneController {
         DialogPane dialogPane = fxmlLoader.load();
         Dialog dialog = new Dialog();
         dialog.setDialogPane(dialogPane);
-        String details = generateAnimalInfo(animal);
         if(animal.getZone().getZoneName().toLowerCase().equals("green")) {
             Image bgImage = new Image(getClass().getResourceAsStream("/image/background/" + changeZone(zone.getZoneName().toLowerCase()) + ".gif"));
             this.zone_background.setImage(bgImage);
@@ -125,10 +124,11 @@ public class MapController extends SceneController {
             this.zone_background.setImage(bgImage);
         }
 
-
         Image newImage = new Image(getClass().getResourceAsStream("/image/animal/" + id + "/" + id + ".png"));
-        this.animal_name.setText(animal.getName());
         this.animal_image.setImage(newImage);
+
+        this.animal_name.setText(animal.getName());
+        this.animal_details.setText(generateAnimalInfo(animal));
         this.zone_name.setText("ZONE " + zone.getZoneName().substring(0, 1));
         this.pane_1.setStyle("-fx-background-color:" + changeColor(zone.getZoneName()) + ";-fx-background-radius:8");
         this.pane_2.setStyle("-fx-background-color:" + changeColor(zone.getZoneName()) + ";-fx-background-radius:8");
@@ -154,7 +154,7 @@ public class MapController extends SceneController {
 
     }
 
-    public String generateAnimalInfo(Animal anm) {
+    private String generateAnimalInfo(Animal anm) {
         return "Size: " + anm.getSize() + " Age: " + anm.getAge() + " Rate: " + anm.getAge();
     }
     private String changeColor(String zone) {
@@ -178,6 +178,34 @@ public class MapController extends SceneController {
         } else {
             return "aquarium";
         }
+    }
+
+    @FXML
+    private void toggleStore() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("store.fxml"));
+        fxmlLoader.setController(this);
+        DialogPane dialogPane = fxmlLoader.load();
+        Dialog dialog = new Dialog();
+        dialog.setDialogPane(dialogPane);
+        this.close_button.setOnAction(e -> {
+            ((Button) e.getSource()).getScene().getWindow().hide();
+        });
+        dialog.initModality(Modality.APPLICATION_MODAL);
+        dialog.showAndWait();
+    }
+
+    @FXML
+    private void toggleToilet()  throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("toilet.fxml"));
+        fxmlLoader.setController(this);
+        DialogPane dialogPane = fxmlLoader.load();
+        Dialog dialog = new Dialog();
+        dialog.setDialogPane(dialogPane);
+        this.close_button.setOnAction(e -> {
+            ((Button) e.getSource()).getScene().getWindow().hide();
+        });
+        dialog.initModality(Modality.APPLICATION_MODAL);
+        dialog.showAndWait();
     }
 
 }
