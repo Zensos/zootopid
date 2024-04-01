@@ -1,7 +1,9 @@
 package com.zootopid.client;
 
 
-public class User implements Payment {
+import java.io.Serializable;
+
+public class User implements Payment, Serializable {
     private String username;
     private String password;
     private String tel;

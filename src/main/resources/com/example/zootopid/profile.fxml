@@ -18,7 +18,7 @@
   <center>
     <AnchorPane prefHeight="1080" prefWidth="1920" BorderPane.alignment="CENTER">
       <children>
-            <ImageView fitHeight="1080.0" fitWidth="1920.0" pickOnBounds="true" preserveRatio="true" style="-fx-effect: blur;">
+            <ImageView fitHeight="1080.0" fitWidth="1920.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../image/view_background.png" />
                </image>
@@ -171,6 +171,11 @@
                 </Button>
               </children>
             </AnchorPane>
+                  <Button onAction="#toggleTopup" layoutX="473.0" layoutY="140.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: #F8FAE5;" text="TOPUP">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
           </children>
         </Pane>
         <Button layoutX="662.0" layoutY="912.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="596.0" style="-fx-background-color: #F8FAE5; -fx-background-radius: 8; -fx-text-alignment: left; -fx-text-fill: black;" text="LOGOUT" textFill="WHITE">
@@ -183,24 +188,14 @@
   <top>
     <AnchorPane prefHeight="60.0" prefWidth="1920.0" style="-fx-background-color: #F8FAE5;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
       <children>
-        <Button layoutX="274.0" layoutY="15.0" mnemonicParsing="false" onAction="#switchToMap" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #43766C;" text="Map" textAlignment="CENTER" textFill="WHITE">
+        <Button layoutX="274.0" layoutY="16.0" mnemonicParsing="false" onAction="#switchToMap" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #43766C;" text="Map" textAlignment="CENTER" textFill="WHITE">
           <font>
-            <Font name="Inter SemiBold" size="12.0" />
-          </font>
-        </Button>
-        <Button layoutX="479.0" layoutY="15.0" mnemonicParsing="false" onAction="#switchToStore" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #43766C;" text="Service" textFill="WHITE">
-          <font>
-            <Font name="Inter SemiBold" size="12.0" />
-          </font>
-        </Button>
-        <Button alignment="CENTER" layoutX="684.0" layoutY="15.0" mnemonicParsing="false" onAction="#switchToProfile" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #43766C;" text="Logout" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
-          <font>
-            <Font name="Inter SemiBold" size="12.0" />
+            <Font name="System Bold" size="12.0" />
           </font>
         </Button>
         <Button alignment="CENTER" layoutX="1636.0" layoutY="15.0" mnemonicParsing="false" onAction="#switchToProfile" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #43766C;" text="Profile" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
           <font>
-            <Font name="Inter SemiBold" size="12.0" />
+            <Font name="System Bold" size="12.0" />
           </font>
         </Button>
         <ImageView fitHeight="60.0" fitWidth="200.0" layoutX="33.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
@@ -208,6 +203,21 @@
             <Image url="@../../../image/icon/logo.png" />
           </image>
         </ImageView>
+        <Button layoutX="453.0" layoutY="16.0" mnemonicParsing="false" onAction="#switchToZoo" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #43766C;" text="ZOO" textAlignment="CENTER" textFill="WHITE">
+          <font>
+            <Font name="System Bold" size="12.0" />
+          </font>
+        </Button>
+        <Button layoutX="634.0" layoutY="16.0" mnemonicParsing="false" onAction="#switchToShow" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #43766C;" text="AQUARIUM" textAlignment="CENTER" textFill="WHITE">
+          <font>
+            <Font name="System Bold" size="12.0" />
+          </font>
+        </Button>
+        <Button layoutX="815.0" layoutY="16.0" mnemonicParsing="false" onAction="#switchToStore" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #43766C;" text="RENTAL" textAlignment="CENTER" textFill="WHITE">
+          <font>
+            <Font name="System Bold" size="12.0" />
+          </font>
+        </Button>
       </children>
     </AnchorPane>
   </top>

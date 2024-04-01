@@ -16,7 +16,10 @@ import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Modality;
 
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.lang.reflect.InvocationTargetException;
 import java.util.Date;
 
 
@@ -29,13 +32,16 @@ public class AuthController extends SceneController {
     protected Label username_label, balance;
 
     @FXML
-    protected Button close_reward, redeem_reward;
+    protected Button close_reward, redeem_reward, close_button;
 
     @FXML
     private ImageView reward_big_image;
 
     @FXML
     private Text reward_name, reward_pts, reward_text;
+
+    @FXML
+    private TextField amount;
 
     @FXML
     protected TableView reward_table;
@@ -55,7 +61,7 @@ public class AuthController extends SceneController {
     @FXML
     protected TableColumn<Ticket, Date> ticket_date;
 
-    public static ObservableList<Reward> rewards = FXCollections.observableArrayList(new Reward("eiei", 10, new Date()));
+    public static ObservableList<Reward> rewards = FXCollections.observableArrayList();
     public static ObservableList<Ticket> tickets = FXCollections.observableArrayList();
 
     LocalStorage localStorage = LocalStorage.getInstance();
@@ -78,7 +84,7 @@ public class AuthController extends SceneController {
             this.redeem_reward.setOnAction(e -> {
                 try {
                     if(localStorage.getUser().getPoint() >= Double.parseDouble(this.reward_pts.getText().replace("pts", ""))) {
-                        redeemReward();
+                        redeemReward(localStorage.getUser());
                         loadSuccess();
                         ((Button) e.getSource()).getScene().getWindow().hide();
                     } else {
@@ -97,8 +103,8 @@ public class AuthController extends SceneController {
         }
     }
 
-    private void redeemReward() {
-        localStorage.getUser().decrement(Double.parseDouble(this.reward_pts.getText().replace("pts", "")));
+    private void redeemReward(Payment payment) {
+        payment.decrement(Double.parseDouble(this.reward_pts.getText().replace("pts", "")));
         AuthController.rewards.add(new Reward(this.reward_name.getText(), Double.parseDouble(this.reward_pts.getText().replace("pts", "")), new Date()));
         this.balance.setText(localStorage.getUser().getPoint() + " PTS");
     }
@@ -173,6 +179,27 @@ public class AuthController extends SceneController {
         }
         this.switchToMap(event);
 
+    }
+
+    @FXML
+    protected void toggleTopup(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("payment.fxml"));
+        fxmlLoader.setController(this);
+        DialogPane dialogPane = fxmlLoader.load();
+        Dialog dialog = new Dialog();
+        dialog.setDialogPane(dialogPane);
+        this.close_button.setOnAction(e -> {
+            ((Button) e.getSource()).getScene().getWindow().hide();
+        });
+        dialog.initModality(Modality.APPLICATION_MODAL);
+        dialog.showAndWait();
+    }
+
+    @FXML
+    protected void topup(ActionEvent event) throws IOException {
+        localStorage.getUser().increment(Double.parseDouble(amount.getText()));
+        this.balance.setText(localStorage.getUser().getPoint() + " PTS");
+        loadSuccess();
     }
 
 }

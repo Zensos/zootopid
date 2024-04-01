@@ -10,12 +10,21 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<DialogPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1260.0" BorderPane.alignment="CENTER" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.zootopid.MapController">
+<DialogPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1260.0" BorderPane.alignment="CENTER" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <content>
       <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1260.0">
          <center>
                   <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1260.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
                      <children>
+                        <Button fx:id="dolphin" layoutX="1039.0" layoutY="240.0" mnemonicParsing="false" onAction="#onHelloButtonClick" style="-fx-background-color: tranparent;">
+                           <graphic>
+                              <ImageView fitHeight="200.0" fitWidth="200.0">
+                                 <image>
+                                    <Image url="@../../../image/animal/dolphin/dolphin_head.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
                         <Label layoutX="99.0" layoutY="24.0" text="Aquarium Map">
                            <font>
                               <Font size="46.0" />
@@ -86,21 +95,12 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Button fx:id="dolphin" layoutX="1039.0" layoutY="240.0" mnemonicParsing="false" onAction="#onHelloButtonClick" style="-fx-background-color: tranparent;">
-                           <graphic>
-                              <ImageView fitHeight="200.0" fitWidth="200.0">
-                                 <image>
-                                    <Image url="@../../../image/animal/dolphin/dolphin_head.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                        </Button>
                   <Text layoutX="27.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="AQUARIUM" wrappingWidth="260.8740234375">
                      <font>
                         <Font name="System Bold" size="38.0" />
                      </font>
                   </Text>
-                  <Button layoutX="1076.0" layoutY="591.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="172.0" style="-fx-background-color: #b19470;" text="CLOSE">
+                  <Button fx:id="close_button" layoutX="1075.0" layoutY="591.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="172.0" style="-fx-background-color: #DCCFBF; -fx-border-radius: 8; -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 10,0,0,1 );" text="CLOSE">
                      <font>
                         <Font name="System Bold" size="21.0" />
                      </font>

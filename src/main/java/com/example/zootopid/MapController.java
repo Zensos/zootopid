@@ -91,17 +91,14 @@ public class MapController extends SceneController {
     @FXML
     protected void toggleAquarium(ActionEvent event) throws IOException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("aquarium.fxml"));
+        fxmlLoader.setController(this);
         DialogPane dialogPane = fxmlLoader.load();
         Dialog dialog = new Dialog();
         dialog.setDialogPane(dialogPane);
-
-        dialog.initModality(Modality.APPLICATION_MODAL);
-        Button closeButton = new Button();
-        closeButton.setOnAction(e -> {
+        this.close_button.setOnAction(e -> {
             ((Button) e.getSource()).getScene().getWindow().hide();
         });
-        closeButton.setVisible(false);
-        dialogPane.getButtonTypes().add(ButtonType.CLOSE);
+        dialog.initModality(Modality.APPLICATION_MODAL);
         dialog.showAndWait();
 
     }
@@ -119,8 +116,7 @@ public class MapController extends SceneController {
         DialogPane dialogPane = fxmlLoader.load();
         Dialog dialog = new Dialog();
         dialog.setDialogPane(dialogPane);
-
-
+        String details = generateAnimalInfo(animal);
         if(animal.getZone().getZoneName().toLowerCase().equals("green")) {
             Image bgImage = new Image(getClass().getResourceAsStream("/image/background/" + changeZone(zone.getZoneName().toLowerCase()) + ".gif"));
             this.zone_background.setImage(bgImage);
@@ -157,6 +153,10 @@ public class MapController extends SceneController {
         dialog.showAndWait();
 
     }
+
+    public String generateAnimalInfo(Animal anm) {
+        return "Size: " + anm.getSize() + " Age: " + anm.getAge() + " Rate: " + anm.getAge();
+    }
     private String changeColor(String zone) {
         switch (zone) {
             case "Red":
@@ -168,7 +168,7 @@ public class MapController extends SceneController {
             case "Blue":
                 return "#BFF0FB";
             default:
-                return "#63D8F5";
+                return "#BFF0FB";
         }
     }
 

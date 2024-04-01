@@ -83,10 +83,14 @@ public class StoreController extends SceneController {
 
     @FXML
     public void purchase() throws IOException {
+        createTransaction(localStorage.getUser());
+    }
+    
+    private void createTransaction(User user) throws IOException {
         double total = Double.parseDouble(this.total.getText());
-        if(total > 0 && localStorage.getUser().getPoint() >= total) {
+        if(total > 0 && user.getPoint() >= total) {
             AuthController.tickets.add(new Ticket("สวนสัตว์", total, new Date()));
-            localStorage.getUser().decrement(total);
+            user.decrement(total);
             loadSuccess();
         } else {
             loadError();
