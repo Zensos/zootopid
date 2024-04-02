@@ -177,8 +177,12 @@ public class AuthController extends SceneController {
             localStorage.setUser(new User("zootopid", "zootopid1", "0999999999", "MEMBER"));
             this.switchToMap(event);
         }
-        this.switchToMap(event);
+    }
 
+    @FXML
+    protected void logout(ActionEvent event) throws IOException {
+        switchToLogin(event);
+        localStorage.setUser(null);
     }
 
     @FXML
